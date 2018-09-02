@@ -1,6 +1,5 @@
 'use strict';
 
-
 const accounts = require('./accounts');
 const logger = require('../utils/logger');
 const userstore = require('../models/user-store');
@@ -13,9 +12,9 @@ const trainerdashboard = {
     const loggedintrainer = accounts.getCurrentTrainer(request);
     const members = userstore.getAllMembers();
     for (let i = 0; i < members.length; i++) {
-      members[i].assessmentssize = assessmentstore.getAssessments(members[i].id).length;
+      members[i].assessmentssize = assessmentstore.getSortedAssessments(members[i].id).length;
     };
-    
+
     const viewData = {
       title: 'Gym App Trainer Dashboard',
       trainer: loggedintrainer,
@@ -23,32 +22,33 @@ const trainerdashboard = {
     };
     response.render('trainerdashboard', viewData);
   },
-  
-   viewMember(request, response) {
+
+  viewMember(request, response) {
     logger.info('Member view rendering');
     const memberId = request.params.id;
-    const member = accounts.getUser(memberId);
+    const member = accounts.getMember(memberId);
     const viewData = {
       title: 'Gym App Trainer Dashboard',
       member: member,
-      assessments: assessmentstore.getAssessments(memberId),
+      assessments: assessmentstore.getSortedAssessments(memberId),
       bmi: analyticshelper.calculateBMI(member),
       bmiCategory: analyticshelper.getBMICategory(member),
       idealWeightIndicator: analyticshelper.isIdealBodyWeight(member),
     };
     response.render('viewmember', viewData);
   },
-  
+
   updateComment(request, response) {
-    
+    //logger.info(request);
     const assessmentId = request.params.assessmentId;
-    const memberId = request.params.memberid;
+    const memberId = request.params.id;
     const comment = request.body.comment;
-    
+
     assessmentstore.setComment(memberId, assessmentId, comment);
-    
+
     logger.info('Updating comment');
     response.redirect(`/viewMember/${memberId}`);
   },
 };
- module.exports = trainerdashboard;
+
+module.exports = trainerdashboard;

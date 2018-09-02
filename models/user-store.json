@@ -1,24 +1,26 @@
 {
   "members": [
     {
-      "firstName": "homer",
-      "lastName": "simpson",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Homer Simpson",
+      "gender": "Male",
       "email": "homer@simpson.com",
       "password": "secret",
+      "address": "Springfield, USA",
       "height": "1.72",
       "weight": "70",
-      "assessmentssize": 2,
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+      "assessmentssize": 2
     },
     {
-      "firstName": "marge",
-      "lastName": "simpson",
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "name": "Marge Simpson",
+      "gender": "Female",
       "email": "marge@simpson.com",
       "password": "secret",
-      "height": "1.52",
+      "address": "Springfield, USA",
+      "height": "1.6",
       "weight": "55",
-      "assessmentssize": 0,
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+      "assessmentssize": 0
     }
   ],
   "trainers": [

@@ -1,12 +1,10 @@
 'use strict';
 
-const accounts = require ('./accounts.js');
+const accounts = require('./accounts');
 const logger = require('../utils/logger');
-const assessmentstore = require('../models/assessment-store');
 const uuid = require('uuid');
-const userstore = require('../models/user-store');
+const assessmentstore = require('../models/assessment-store');
 const analyticshelper = require('../utils/analyticshelper');
-
 
 const dashboard = {
   index(request, response) {
@@ -22,14 +20,7 @@ const dashboard = {
     };
     response.render('dashboard', viewData);
   },
-  
-  deleteAssessment(request, response) {
-    const memberId = request.params.memberid;
-    const assessmentId = request.params.assessmentid;
-    assessmentstore.removeAssessment(memberId, assessmentId);
-    response.redirect('/dashboard');
-  },
-  
+
   addAssessment(request, response) {
     const memberId = request.params.id;
     const assessment = {
@@ -43,8 +34,16 @@ const dashboard = {
       hips: request.body.hips,
     };
     assessmentstore.addAssessment(memberId, assessment);
-    response.redirect('/dashboard');
+    response.redirect('/dashboard/');
+  },
+
+  deleteAssessment(request, response) {
+    const memberId = request.params.memberid;
+    const assessmentId = request.params.assessmentid;
+    assessmentstore.removeAssessment(memberId, assessmentId);
+    response.redirect('/dashboard/');
   },
 };
 
 module.exports = dashboard;
+
