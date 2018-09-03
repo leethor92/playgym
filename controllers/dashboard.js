@@ -23,6 +23,34 @@ const dashboard = {
     };
     response.render('dashboard', viewData);
   },
+  
+  goals(request, response) {
+    logger.info('Goals rendering');
+    const loggedInMember = accounts.getCurrentMember(request);
+    const viewData = {
+      title: 'Members Goals',
+      member: loggedInMember,
+      goals: goalstore.getSortedGoals(loggedInMember.id),
+    };
+    response.render('goals', viewData);
+  },
+  
+  addGoal(request, response) {
+    const memberId = accounts.getCurrentMember(request).id;
+    const goal = {
+      goalId: uuid(),
+      date: (new Date(), 'ddd, dd mmm yyyy HH:MM:ss Z'),
+      weight: request.body.weight,
+      chest: request.body.chest,
+      thigh: request.body.thigh,
+      upperArm: request.body.upperArm,
+      waist: request.body.waist,
+      hips: request.body.hips,
+      description: request.body.description,
+    };
+    goalstore.addGoal(memberId, goal);
+    response.redirect('/goals');
+  },
 
   addAssessment(request, response) {
     const memberId = request.params.id;
@@ -47,6 +75,8 @@ const dashboard = {
     response.redirect('/dashboard/');
   },
 };
+  
+
 
 module.exports = dashboard;
 
