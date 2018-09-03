@@ -1,0 +1,23 @@
+{
+  "membersGoals": [
+    {
+    "memberId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+    "goals": [
+      {
+        "goalId": "3ad52697-6d98-4d80-8273-084de55a86de",
+        "date": "Tue, 03 Sept 2018",
+        "weight": "90",
+        "chest": "40",
+        "thigh": "34",
+        "upperArm": "30",
+        "waist": "36",
+        "hips": "36"
+      }
+    ]
+  },
+  {
+    "memberId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+    "goals": []
+  },
+  ]
+}

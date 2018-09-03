@@ -5,33 +5,70 @@
       "assessments": [
         {
           "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d2",
-          "date": "Wed, 17 May 2017 16:00:00 GMT",
+          "date": "Wed, 17 May 2018 16:00:00 GMT",
           "weight": 134,
           "chest": 44,
           "thigh": 30,
           "upperArm": 27,
           "waist": 38,
           "hips": 42,
-          "comment": "What happened?",
+          "comment": "Not good enough!!!",
           "trend": "red"
         },
         {
           "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d1",
-          "date": "Mon, 24 Apr 2017 14:26:40 GMT",
+          "date": "Mon, 24 Apr 2018 14:26:40 GMT",
           "weight": 126,
           "chest": 44,
           "thigh": 30,
           "upperArm": 27,
           "waist": 38,
           "hips": 42,
-          "comment": "Good job Homer!",
+          "comment": "Needs to do better",
+          "trend": "red"
+        },
+        {
+          "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d3",
+          "date": "Tue, 03 Sep 2018 14:26:40 GMT",
+          "weight": 100,
+          "chest": 44,
+          "thigh": 30,
+          "upperArm": 27,
+          "waist": 38,
+          "hips": 42,
+          "comment": "not bad",
           "trend": "red"
         }
       ]
     },
     {
       "memberId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "assessments": []
+      "assessments": [
+        {
+          "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d5",
+          "date": "Tue, 03 Sep 2018 21:26:40 GMT",
+          "weight": 60,
+          "chest": 44,
+          "thigh": 30,
+          "upperArm": 27,
+          "waist": 28,
+          "hips": 42,
+          "comment": "not bad",
+          "trend": "green"
+        },
+        {
+          "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d4",
+          "date": "Tue, 03 Sep 2018 21:26:40 GMT",
+          "weight": 55,
+          "chest": 44,
+          "thigh": 30,
+          "upperArm": 27,
+          "waist": 28,
+          "hips": 40,
+          "comment": "lost weight",
+          "trend": "green"
+        }
+      ]
     }
   ]
 }

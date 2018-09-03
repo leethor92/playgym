@@ -5,15 +5,18 @@ const logger = require('../utils/logger');
 const uuid = require('uuid');
 const assessmentstore = require('../models/assessment-store');
 const analyticshelper = require('../utils/analyticshelper');
+const goalstore = require('../models/goal-store');
 
 const dashboard = {
   index(request, response) {
     logger.info('dashboard rendering');
     const loggedInMember = accounts.getCurrentMember(request);
+    logger.debug(goalstore.getSortedGoals(loggedInMember.id));
     const viewData = {
       title: 'Gym App Dashboard',
       member: loggedInMember,
       assessments: assessmentstore.getAssessmentsTrends(loggedInMember, analyticshelper.idealBodyWeight(loggedInMember)),
+      goals: goalstore.getSortedGoals(loggedInMember.id),
       bmi: analyticshelper.calculateBMI(loggedInMember),
       bmiCategory: analyticshelper.getBMICategory(loggedInMember),
       idealWeightIndicator: analyticshelper.isIdealBodyWeight(loggedInMember),
