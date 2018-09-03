@@ -1,7 +1,9 @@
 {{> trainermenu id="dashboard"}}
- <div class="ui raised segment">
+
+<div class="ui raised segment">
     {{> useranalytics}}
-     {{#each assessments}}
+
+    {{#each assessments}}
     <table class="ui table celled">
         <thead>
         <tr>
@@ -26,13 +28,15 @@
         </tr>
         </tbody>
     </table>
-     <form class="ui form" action="/updateComment/{{../member.id}}/{{assessmentId}}" method="POST">
+
+    <form class="ui form" action="/updateComment/{{../member.id}}/{{assessmentId}}" method="POST">
         <div class="ui field">
             <label>Comments</label>
             <input placeholder="Trainers Comment.." type="text" value="{{comment}}" name="comment">
         </div>
-         <button class="ui blue submit button">Update</button>
+
+        <button class="ui blue submit button">Update</button>
     </form>
     {{/each}}
-   
- </div> 
+
+</div>

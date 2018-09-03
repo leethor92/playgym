@@ -68,7 +68,7 @@ const analytics = {
   },
   
   getCurrentWeight(member) {
-    const assessments = assessmentstore.getSortedAssessments(member.id);
+    const assessments = assessmentstore.getAssessments(member.id);
     if (assessments.length > 0) {
       return assessments[0].weight;
     } else {

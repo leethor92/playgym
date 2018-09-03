@@ -4,31 +4,20 @@
       "memberId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
-          "assessmentId": "3a44b6a6-c5f0-4f6d-992f-21e622dcf92a",
-          "date": "Wed, 30 Aug 2018 16:48:54 GMT",
-          "weight": "21",
-          "chest": "16",
-          "thigh": "16",
-          "upperArm": "16",
-          "waist": "24",
-          "hips": "24",
-          "trend": "green"
-        },
-        {
           "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d2",
-          "date": "Wed, 30 Oct 2018 16:00:00 GMT",
+          "date": "Wed, 17 May 2017 16:00:00 GMT",
           "weight": 134,
           "chest": 44,
           "thigh": 30,
           "upperArm": 27,
           "waist": 38,
           "hips": 42,
-          "comment": "Needs Improvement",
+          "comment": "What happened?",
           "trend": "red"
         },
         {
           "assessmentId": "53a149ba-6d0c-4300-9d46-d835177a36d1",
-          "date": "Mon, 24 Apr 2018 14:26:40 GMT",
+          "date": "Mon, 24 Apr 2017 14:26:40 GMT",
           "weight": 126,
           "chest": 44,
           "thigh": 30,
@@ -37,51 +26,12 @@
           "hips": 42,
           "comment": "Good job Homer!",
           "trend": "red"
-        },
-        {
-          "assessmentId": "9f1b62e4-4990-4736-8d03-880741793f8b",
-          "date": "Thu, 07 Sep 2018 20:01:21 GMT",
-          "weight": "20",
-          "chest": "20",
-          "thigh": "20",
-          "upperArm": "20",
-          "waist": "20",
-          "hips": "20",
-          "trend": "red"
         }
       ]
     },
     {
       "memberId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "assessments": [
-        {
-          "assessmentId": "0dfa5501-f460-4495-a509-6115be3c9d3d",
-          "date": "Thu, 31 Aug 2018 12:11:22 GMT",
-          "weight": "65",
-          "chest": "1",
-          "thigh": "1",
-          "upperArm": "1",
-          "waist": "1",
-          "hips": "1",
-          "trend": "red",
-          "comment": "Tut tut!"
-        }
-      ]
-    },
-    {
-      "memberId": "fd835e63-961d-4b1a-8b5e-64a10e9eb3ae",
-      "assessments": [
-        {
-          "assessmentId": "3df9fa9d-0553-4688-bb8c-810212c4ce66",
-          "date": "Thu, 07 Sep 2018 11:27:18 GMT",
-          "weight": "1",
-          "chest": "1",
-          "thigh": "1",
-          "upperArm": "1",
-          "waist": "1",
-          "hips": "1"
-        }
-      ]
+      "assessments": []
     }
   ]
 }
