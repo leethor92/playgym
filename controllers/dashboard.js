@@ -37,15 +37,17 @@ const dashboard = {
   
   addGoal(request, response) {
     const memberId = accounts.getCurrentMember(request).id;
+    const date = new Date(request.body.date);
     const goal = {
       goalId: uuid(),
-      date: (new Date(), 'ddd, dd mmm yyyy HH:MM:ss Z'),
+      date: date.toString(),
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,
       upperArm: request.body.upperArm,
       waist: request.body.waist,
       hips: request.body.hips,
+      tolerance: request.body.tolerance,
       description: request.body.description,
     };
     goalstore.addGoal(memberId, goal);

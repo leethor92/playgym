@@ -38,7 +38,7 @@
           "waist": "1",
           "hips": "1",
           "description": "description",
-          "status": "ongoing"
+          "status": "pending"
         },
         {
           "goalId": "53dcd684-759f-4820-b7c1-dface8f7d43b",
@@ -49,7 +49,8 @@
           "upperArm": "20",
           "waist": "20",
           "hips": "20",
-          "description": "description"
+          "description": "description",
+          "status": "ongoing"
         },
         {
           "goalId": "53dcd684-759f-4820-b7c1-dface8f7d43b",
@@ -60,7 +61,8 @@
           "upperArm": "20",
           "waist": "20",
           "hips": "20",
-          "description": "description"
+          "description": "description",
+          "status": "ongoing"
         },
         {
           "goalId": "4ab89f16-46df-4dd7-b4dc-017194e51696",
@@ -71,7 +73,55 @@
           "upperArm": "20",
           "waist": "20",
           "hips": "20",
-          "description": "testing functionality"
+          "description": "testing functionality",
+          "status": "ongoing"
+        },
+        {
+          "goalId": "690dcb9f-3f21-48e0-b9a4-fcbcce9135ca",
+          "date": "ddd, dd mmm yyyy HH:MM:ss Z",
+          "weight": "100",
+          "chest": "20",
+          "thigh": "20",
+          "upperArm": "20",
+          "waist": "20",
+          "hips": "30",
+          "status": "ongoing"
+        },
+        {
+          "goalId": "335e5392-f9f7-4fda-8265-b9bdf53cb2e0",
+          "date": "Tue Sep 04 2018 00:00:00 GMT+0000 (UTC)",
+          "weight": "100",
+          "chest": "30",
+          "thigh": "20",
+          "upperArm": "20",
+          "waist": "30",
+          "hips": "30",
+          "status": "achieved"
+        },
+        {
+          "goalId": "0e9f2edd-4555-4a4a-a468-77a9fe098577",
+          "date": "Tue Sep 04 2018 00:00:00 GMT+0000 (UTC)",
+          "weight": "100",
+          "chest": "30",
+          "thigh": "30",
+          "upperArm": "30",
+          "waist": "30",
+          "hips": "30",
+          "tolerance": "3",
+          "description": "Needs to be better",
+          "status": "achieved"
+        },
+        {
+          "goalId": "a0439d8a-44c9-46fa-b34e-5df9a575adee",
+          "date": "Wed Sep 05 2018 00:00:00 GMT+0000 (UTC)",
+          "weight": "120",
+          "chest": "40",
+          "thigh": "40",
+          "upperArm": "35",
+          "waist": "36",
+          "hips": "30",
+          "tolerance": "3",
+          "description": "Needs to be better"
         }
       ]
     },

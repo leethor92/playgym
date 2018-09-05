@@ -6,6 +6,7 @@ const userstore = require('../models/user-store');
 const assessmentstore = require('../models/assessment-store');
 const analyticshelper = require('../utils/analyticshelper');
 const goalstore = require('../models/goal-store');
+const uuid = require('uuid');
 
 const trainerdashboard = {
   index(request, response) {
@@ -38,6 +39,24 @@ const trainerdashboard = {
       goals: goalstore.getSortedGoals(memberId),
     };
     response.render('viewmember', viewData);
+  },
+  
+  addGoal (request, response) {
+    const memberId = request.parms.memberid
+    const goal = {
+      goalId: uuid(),
+      date: (new Date(), 'ddd, dd mmm yyyy HH:MM:ss Z'),
+      weight: request.body.weight,
+      chest: request.body.chest,
+      thigh: request.body.thigh,
+      upperArm: request.body.upperArm,
+      waist: request.body.waist,
+      hips: request.body.hips,
+      tolerance: request.body.tolerance,
+      description: request.body.description,
+    }
+    goalstore.addGoal(memberId, goal);
+    response.redirect('/viewmember/' + memberId);
   },
 
   updateComment(request, response) {
