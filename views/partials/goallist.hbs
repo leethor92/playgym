@@ -1,10 +1,17 @@
 <div class ="ui segment">
-  <form class ="ui form" action="/dashboard/{{member.id}}/addgoal" method="POST">
+  <form class="ui form" action="/{{#if trainerview}}trainer{{/if}}dashboard/{{member.id}}/addgoal" method="POST">
     <h3 class="ui header">
       <i class="child icon"></i>
       Goals
     </h3>
-    <div class="three fields">
+    <div class="four fields">
+      <div class="field">
+        <label>Date</label>
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input placeholder="Date" type="text" name="date" required>
+        </div>
+      </div>
       <div class="field">
         <label>Weight</label>
         <input placeholder="00.00kg" type="number" step=".01" name="weight" required>
@@ -18,8 +25,7 @@
         <input placeholder="00.00cm" type="number" step=".01" name="thigh" required>
       </div>
     </div>
-    <div class="Three fields">
-      <div class="three fields">
+      <div class="four fields">
             <div class="field">
                 <label>Upper Arm</label>
                 <input placeholder="00.00cm" type="number" step=".01" name="upperArm" required>
@@ -33,17 +39,23 @@
                 <input placeholder="00.00cm" type="number" step=".01" name="hips" required>
             </div>
         </div>
-      <div class= "field"
-            <div class ="eight wide field">
-                <label>Comment</label>
-                <input placeholder="Comment" type="text" name="comment" required>
+      <div class= "two fields">
+           <div class ="four wide field">
+            <label>Tolerance</label>
+            <input placeholder="Tolerance" type="number" step=".01" name="tolerance" requried>
             </div>
-     </div>
+            <div class ="eight wide field">
+                <label>Description</label>
+                <input placeholder="Description" type="text" name="description" required>
+            </div> 
+    </div>
     <button class="ui blue submit button">Add Goal</button>
   </form>
      <table class="ui table center bottom aligned">
         <thead>
         <tr>
+            <th>Status</th>
+            <th>Tolerance</th>
             <th>Date</th>
             <th>Weight</th>
             <th>Chest</th>
@@ -51,12 +63,15 @@
             <th>Upper Arm</th>
             <th>Waist</th>
             <th>Hips</th>
-            <th>Comment</th>
+            <th>Description</th>
         </tr>
         </thead>
         <tbody>
+          
          {{#each goals}}
             <tr>
+                <td>{{Status}}</td>
+                <td>{{tolerance}}</td>
                 <td>{{date}}</td>
                 <td>{{weight}}</td>
                 <td>{{chest}}</td>
@@ -64,7 +79,7 @@
                 <td>{{upperArm}}</td>
                 <td>{{waist}}</td>
                 <td>{{hips}}</td>
-                <td>{{comment}}</td>
+                <td>{{Description}}</td>
             </tr>
         {{/each}}
          </tbody>
